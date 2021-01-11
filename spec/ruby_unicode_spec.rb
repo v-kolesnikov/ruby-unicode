@@ -23,9 +23,9 @@ RSpec.describe RubyUnicode do
   it { expect(∌ Set[1, 2, 3], 5).to eq true }
   it { expect(∈ 1, Set[1, 2, 3]).to eq true }
   it { expect(∉ 5, Set[1, 2, 3]).to eq true }
-  it { expect(∀ :odd?.to_proc, Set[1, 5, 3]).to eq true }
-  it { expect(∃ :even?.to_proc, [1, 2, 3]).to eq true }
-  it { expect(∄ :even?.to_proc, [1, 5, 3]).to eq true }
+  it { expect(∀ :odd?, Set[1, 5, 3]).to eq true }
+  it { expect(∃ :even?, [1, 2, 3]).to eq true }
+  it { expect(∄ :even?, [1, 5, 3]).to eq true }
   it { expect(∪ Set[1, 2], Set[2, 3]).to eq Set[1, 3, 2] }
   it { expect(∩ Set[1, 2], Set[2, 3]).to eq Set[2] }
   it { expect(⊆ Set[2], Set[1, 2, 3]).to eq true }
@@ -36,5 +36,5 @@ RSpec.describe RubyUnicode do
   it { expect(∖ Set[1, 2, 3], Set[3]).to eq Set[1, 2] }
   it { expect(λ { |x| x + 1 }[1]).to eq 2 }
   it { expect(λ(&:succ)[1]).to eq 2 }
-  it { expect((∘ :to_s.to_proc, :succ.to_proc)[1]).to eq '2' }
+  it { expect((∘ :to_s, :succ)[1]).to eq '2' }
 end

@@ -79,15 +79,15 @@ module RubyUnicode
   end
 
   def ∀ f, set
-    set.all?(f)
+    set.all?(f.to_proc)
   end
 
   def ∃ f, set
-    set.any?(f)
+    set.any?(f.to_proc)
   end
 
   def ∄ f, set
-    set.none?(f)
+    set.none?(f.to_proc)
   end
 
   def ∪ x, y
@@ -127,6 +127,6 @@ module RubyUnicode
   end
 
   def ∘ *procs
-    procs.reduce(&:>>)
+    procs.map(&:to_proc).reduce(&:>>)
   end
 end

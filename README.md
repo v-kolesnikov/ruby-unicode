@@ -52,9 +52,9 @@ include RubyUnicode
 ∈ 1, Set[1, 2, 3] # => true
 ∉ 5, Set[1, 2, 3] # => true
 
-∀ :odd?.to_proc, Set[1, 5, 3] # => true
-∃ :even?.to_proc, [1, 2, 3]   # => true
-∄ :even?.to_proc, [1, 5, 3]   # => true
+∀ :odd?, Set[1, 5, 3] # => true
+∃ :even?, [1, 2, 3]   # => true
+∄ :even?, [1, 5, 3]   # => true
 
 ∪ Set[1, 2], Set[2, 3]  # => Set[1, 3, 2]
 ∩ Set[1, 2], Set[2, 3]  # => Set[2]
@@ -67,5 +67,5 @@ include RubyUnicode
 
 λ { |x| x + 1 }[1]  # => 2
 λ(&:succ)[1]        # => 2
-(∘ :to_s.to_proc, :succ.to_proc)[1] # => '2'
+(∘ :to_s, :succ)[1] # => '2'
 ```
