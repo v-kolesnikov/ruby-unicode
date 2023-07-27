@@ -4,23 +4,7 @@
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'ruby-unicode'
-```
-
-And then execute:
-
-```
-bundle install
-```
-
-Or install it yourself as:
-
-```
-gem install ruby-unicode
-```
+Installation is available from GitHub only.
 
 ## Usage
 
